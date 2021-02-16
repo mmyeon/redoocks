@@ -1,15 +1,12 @@
 import React from "react";
+import UserContextProvider from "./context";
 import Screen from "./Screen";
 
 const App = () => {
-  const user = {
-    name: "mallang",
-  };
-
   return (
-    <div>
-      <Screen user={user} />
-    </div>
+    <UserContextProvider>
+      <Screen />
+    </UserContextProvider>
   );
 };
 
