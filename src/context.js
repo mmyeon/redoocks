@@ -9,11 +9,7 @@ const Lang = ({ children, defaultLang, translations }) => {
     if (lang === defaultLang) {
       return text;
     } else {
-      for (const [key, value] of Object.entries(translations[lang])) {
-        if (key === text) {
-          return value;
-        }
-      }
+      return translations[lang][text];
     }
   };
 
