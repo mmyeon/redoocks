@@ -1,15 +1,14 @@
-import React from "react";
-import { useFns } from "./context";
-import Header from "./Header";
+import React, { useContext } from "react";
+import { LangContext } from "./context";
 
 const Screen = () => {
-  const { logUserIn } = useFns();
+  const { lang } = useContext(LangContext);
+  console.log(lang);
 
   return (
     <>
-      <Header />
-      <h1>First Screen</h1>
-      <button onClick={logUserIn}>Log user in</button>
+      <h1>Hello!</h1>
+      <button>Translate</button>
     </>
   );
 };
