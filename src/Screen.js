@@ -8,7 +8,7 @@ const Screen = () => {
   return (
     <>
       <h1>{t("Hello")}</h1>
-      <button onClick={() => setLang("es")}>Translate</button>
+      <button onClick={() => setLang("es")}>{t("Translate")}</button>
     </>
   );
 };
