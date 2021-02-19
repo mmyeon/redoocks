@@ -1,14 +1,13 @@
-import React, { useContext } from "react";
-import { LangContext } from "./context";
+import React from "react";
+import { useSetLang } from "./context";
 
 const Screen = () => {
-  const { lang } = useContext(LangContext);
-  console.log(lang);
+  const setLang = useSetLang();
 
   return (
     <>
       <h1>Hello!</h1>
-      <button>Translate</button>
+      <button onClick={() => setLang("es")}>Translate</button>
     </>
   );
 };
